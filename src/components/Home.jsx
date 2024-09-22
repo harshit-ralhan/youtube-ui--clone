@@ -43,9 +43,8 @@ const Home = ({ signin, setSignin }) => {
         {/* Right Mid */}
         <div className="max-md:w-full max-md:ml-0 flex  flex-col w-[calc(100vw-230px)] ml-[213px]  max-md:scrollbar-none">
           <ListItems />
-          <div className="  h-[calc(100vh-3.65rem)]  flex-row grow bg-lime-400  items-start flex flex-wrap w-full  pt-[20px]  mt-[32px]">
+          <div className="  h-[calc(100vh-3.65rem)]  flex-row grow   items-start flex flex-wrap w-full  pt-[20px]  mt-[32px]">
               {/* data without rapidApi */}
-            <p>Hello harshit</p>
             {data.map((item) => {
               if (item.type !== "video") return false;
               return <Video key={item?.video?.videoId} video={item?.video} />;
