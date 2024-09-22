@@ -5,16 +5,30 @@ import { useAuth } from "../context/AuthProvider";
 import ListItems from "./ListItems";
 import axios from "axios";
 import Navbar from "./Navbar";
+import { fetchData } from '../utils/rapidapi'
 
 const Home = ({ signin, setSignin }) => {
   const [data, setData] = useState([]);
+
+
   // // from apiData.json
-  useEffect(() => {
+  const fetchSampleData = () => {
     axios.get("../src/example_responses/apiData.json").then((res) => {
       // console.log(res)
       setData(res.data.contents);
       // console.log(data);
     });
+  }
+
+  // from RapidApi website
+  const fetchApiData = () => {
+    const apiData = fetchData('/home/?hl=en&gl=US');
+    console.log("apiData - ", apiData);
+  }
+
+  useEffect(() => {
+    fetchSampleData();
+    // fetchApiData();
   }, []);
 
   // const { data, loading } = useAuth();
