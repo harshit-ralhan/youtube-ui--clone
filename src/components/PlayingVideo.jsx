@@ -33,9 +33,9 @@ const PlayingVideo = ({ signin, setSignin }) => {
   const [relatedVidContent, setRelatedVidContent] = useState([]);
 
   useEffect(() => {
-    fetchVideoDetails();
+    // fetchVideoDetails();
 
-    // fetchSampleVideoDetails();
+    fetchSampleVideoDetails();
   }, []);
 
   const fetchVideoDetails = () => {
