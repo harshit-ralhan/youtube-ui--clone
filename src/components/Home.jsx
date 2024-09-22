@@ -36,7 +36,7 @@ const Home = ({ signin, setSignin }) => {
   return (
     <div className="overflow-y-scroll overflow-x-hidden z-50 ">
       <Navbar signin={signin} setSignin={setSignin} />
-      <p>Hello harshit</p>
+      
       <div className="flex mt-[60px] flex-row w-[100vw]  ">
         {/* Sidebar div */}
         <Sidebar setSignin={setSignin} signin={signin} />
@@ -45,6 +45,7 @@ const Home = ({ signin, setSignin }) => {
           <ListItems />
           <div className="  h-[calc(100vh-3.65rem)]  flex-row grow  items-start flex flex-wrap w-full  pt-[20px]  mt-[32px]">
               {/* data without rapidApi */}
+            <p>Hello harshit</p>
             {data.map((item) => {
               if (item.type !== "video") return false;
               return <Video key={item?.video?.videoId} video={item?.video} />;
