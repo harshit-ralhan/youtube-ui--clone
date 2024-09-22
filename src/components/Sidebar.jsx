@@ -278,7 +278,7 @@ const Sidebar = ({ signin, setSignin }) => {
           <hr className="" />
         </div>
         {/* Subscriptions wala part */}
-        {signin ? (
+        {/* {signin ? (
           <>
             {" "}
             <div className="py-2">
@@ -312,7 +312,7 @@ const Sidebar = ({ signin, setSignin }) => {
         )}
         <div className="py-2">
           <hr />
-        </div>
+        </div> */}
         {/* Explore wala part */}
         <div className="items-center space-y-0  mx-3">
           <div className="flex items-center space-x-2 cursor-text duration-300 rounded-xl p-2">
